@@ -50,6 +50,7 @@ mixd-website/
 ├── js/
 │   └── main.js       <- Menu button, fade-in effect, contact form
 ├── images/           <- Put any image files here
+├── visuals/          <- Separate workspace for design/graphics work (see below)
 └── README.md         <- This file
 ```
 
@@ -57,6 +58,18 @@ mixd-website/
 
 Every file is commented in plain English. Anything between `<!--` and `-->` in an
 HTML file is a note to you and does not appear on the website.
+
+
+### The `visuals/` folder
+
+Graphics work (logo, favicon, share image, diagrams, icons) happens in its own
+`visuals/` folder so it never collides with edits to the pages themselves.
+`visuals/AGENTS.md` is the brief — brand colours, constraints and the to-do list.
+Finished assets land in `visuals/exports/` and are listed in `visuals/HANDOFF.md`
+with the exact snippet to paste into a page.
+
+Nothing in `visuals/` affects the live site until a snippet from `HANDOFF.md` is
+pasted into one of the `.html` files.
 
 ---
 
