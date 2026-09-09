@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  MIXD — HOME PAGE  (index.html)
+  ============================================================================
+  This is the page people see first. Its filename must stay "index.html".
+
+  HOW TO EDIT THIS PAGE (no coding knowledge needed):
+    • Text you can change is between tags, like  <h1>Change me</h1>
+    • Do NOT delete the angle brackets < > — they hold the page together
+    • Anything between  <!-- and -->  is a note to you and is not shown
+    • Every section below starts with a comment saying what it is
+
+  The colours and fonts are NOT in this file. They are in css/style.css.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- The text shown in the browser tab -->
+  <title>MIXD — Two Brands. One Fit.</title>
+
+  <!-- The short description Google shows under the link -->
+  <meta name="description" content="MIXD creates limited-run apparel from unexpected brand collaborations. Two brands, one fit.">
+
+  <!-- Loads the stylesheet that controls how everything looks -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       HEADER / NAVIGATION BAR
+       Appears at the top of every page.
+       TO RENAME A LINK: change the words between > and </a>
+       IMPORTANT: this same block is copied into every .html file. If you
+       change it here, copy it into the other pages too so they all match.
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">MIX<span class="grad">D</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="marketing.html">Marketing Plan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====================================================================
+         HERO — the big headline at the top of the page
+         This is the first thing visitors read. Keep it short and punchy.
+         ==================================================================== -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Limited-run collaboration apparel</span>
+        <h1>Two brands.<br>One <span class="grad">fit</span>.</h1>
+        <p class="lead center">
+          MIXD takes two labels nobody expected to see together and turns them into
+          one piece of clothing. Small drops, real materials, nothing restocked.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="products.html">Shop the drops</a>
+          <a class="btn btn-ghost" href="about.html">Our story</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         STATS BAR — four quick numbers that build credibility
+         TO EDIT: change the number in .stat-num and the words below it.
+         ==================================================================== -->
+    <section class="section-soft reveal" style="padding: 56px 0;">
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num grad">14</div>
+            <div class="stat-label">Collaboration drops released</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num grad">250</div>
+            <div class="stat-label">Pieces per limited run</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num grad">92%</div>
+            <div class="stat-label">Drops sold out in 72 hours</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num grad">100%</div>
+            <div class="stat-label">Organic or recycled cotton</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         WHAT WE DO — three cards explaining the business in plain terms
+         TO ADD A FOURTH CARD: copy one whole <article>...</article> block,
+         paste it below the last one, then change "cols-3" above to "cols-4".
+         ==================================================================== -->
+    <section class="reveal">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What we do</span>
+          <h2>Collaboration, without the wait</h2>
+          <p class="lead center">
+            Big brand collabs normally take a year and a legal team. We licence smaller,
+            well-loved labels and put the drop out in six weeks.
+          </p>
+        </div>
+
+        <div class="grid cols-3">
+
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card-icon">🤝</div>
+            <h3>We licence the brand</h3>
+            <p>
+              We sign short-term licensing deals with heritage snack, drink and record
+              labels — the ones people already feel nostalgic about.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card-icon">✏️</div>
+            <h3>We design the mix</h3>
+            <p>
+              Our in-house team blends the partner's identity with the MIXD silhouette.
+              Every drop is one design, released in one run.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card-icon">📦</div>
+            <h3>We drop it and stop</h3>
+            <p>
+              250 pieces, then the design is retired for good. Scarcity is the product
+              as much as the cotton is.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         FEATURED DROPS — three products pulled from the Products page
+         The clothing pictures are drawn in code (SVG), not photos.
+         TO CHANGE A COLOUR: edit the two  stop-color="#XXXXXX"  values.
+         The two colours represent the two brands being mixed.
+         ==================================================================== -->
+    <section class="section-soft reveal">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Current drops</span>
+          <h2>Out now</h2>
+        </div>
+
+        <div class="grid cols-3">
+
+          <!-- Product 1 -->
+          <article class="product">
+            <div class="product-art">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Hooded sweatshirt in amber and cream">
+                <defs>
+                  <linearGradient id="mix1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="50%" stop-color="#B4671E"/>
+                    <stop offset="50%" stop-color="#F2E3C8"/>
+                  </linearGradient>
+                </defs>
+                <path fill="url(#mix1)" d="M70 38 L38 56 C34 58 32 62 33 66 L44 112 C45 117 50 120 55 118 L66 114 L66 178 C66 181 68 183 71 183 L129 183 C132 183 134 181 134 178 L134 114 L145 118 C150 120 155 117 156 112 L167 66 C168 62 166 58 162 56 L130 38 Z"/>
+                <path fill="url(#mix1)" d="M70 38 C78 52 92 58 100 58 C108 58 122 52 130 38 C120 33 110 31 100 31 C90 31 80 33 70 38 Z"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <span class="tag">Drop 14</span>
+              <h3 style="margin-top:12px;">The Root Hoodie</h3>
+              <p class="product-mix">Fizzwell Root Beer × MIXD</p>
+              <div class="product-price"><span>Heavyweight hoodie</span><span>$68</span></div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product">
+            <div class="product-art">
+              <svg viewBox="0 0 200 200" role="img" aria-label="T-shirt in yellow and red">
+                <defs>
+                  <linearGradient id="mix2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="50%" stop-color="#F5C518"/>
+                    <stop offset="50%" stop-color="#E23B2E"/>
+                  </linearGradient>
+                </defs>
+                <path fill="url(#mix2)" d="M74 40 L40 58 C36 60 34 64 35 68 L45 104 C46 109 51 112 56 110 L68 106 L68 176 C68 179 70 181 73 181 L127 181 C130 181 132 179 132 176 L132 106 L144 110 C149 112 154 109 155 104 L165 68 C166 64 164 60 160 58 L126 40 C120 50 110 54 100 54 C90 54 80 50 74 40 Z"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <span class="tag">Drop 13</span>
+              <h3 style="margin-top:12px;">Snack Stack Tee</h3>
+              <p class="product-mix">Krunchy Corn × MIXD</p>
+              <div class="product-price"><span>Boxy cotton tee</span><span>$32</span></div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product">
+            <div class="product-art">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Crewneck sweatshirt in black and violet">
+                <defs>
+                  <linearGradient id="mix3" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="50%" stop-color="#1B1B20"/>
+                    <stop offset="50%" stop-color="#7A4DFF"/>
+                  </linearGradient>
+                </defs>
+                <path fill="url(#mix3)" d="M74 40 L38 56 C34 58 32 62 33 66 L44 112 C45 117 50 120 55 118 L66 114 L66 178 C66 181 68 183 71 183 L129 183 C132 183 134 181 134 178 L134 114 L145 118 C150 120 155 117 156 112 L167 66 C168 62 166 58 162 56 L126 40 C120 50 110 54 100 54 C90 54 80 50 74 40 Z"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <span class="tag">Drop 12</span>
+              <h3 style="margin-top:12px;">B-Side Crewneck</h3>
+              <p class="product-mix">Vinyl Vault Records × MIXD</p>
+              <div class="product-price"><span>Brushed-back crewneck</span><span>$58</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="center" style="margin-top:40px;">
+          <a class="btn btn-ghost" href="products.html">See the full range</a>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         HOW IT WORKS — numbered steps
+         ==================================================================== -->
+    <section class="reveal">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>From handshake to hoodie in six weeks</h2>
+        </div>
+
+        <div class="grid cols-4">
+          <div class="card">
+            <div class="step-num">1</div>
+            <h3>Partner</h3>
+            <p>We approach a brand with a loyal following and agree a short licence.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">2</div>
+            <h3>Design</h3>
+            <p>One design per partner. Approved by both sides in two rounds.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">3</div>
+            <h3>Produce</h3>
+            <p>250 units printed by our certified supplier on organic cotton blanks.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">4</div>
+            <h3>Drop</h3>
+            <p>Announced 48 hours ahead. Sold online only. Never restocked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         SUSTAINABILITY / VALUES — dark band for visual contrast
+         ==================================================================== -->
+    <section class="section-dark reveal">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <span class="eyebrow" style="color:#FF9F0A;">Why limited runs</span>
+            <h2>Making less, on purpose</h2>
+            <p class="lead">
+              The clothing industry's biggest problem is unsold stock. By producing a fixed
+              250 units and never restocking, MIXD sells through almost everything it makes —
+              which is better for our margin and better for the landfill.
+            </p>
+          </div>
+          <div class="grid" style="gap:18px;">
+            <div class="card">
+              <h3>Organic &amp; recycled only</h3>
+              <p>Every blank is GOTS-certified organic cotton or recycled poly-cotton.</p>
+            </div>
+            <div class="card">
+              <h3>Printed to order region</h3>
+              <p>Produced in the region it ships to, cutting freight emissions per unit.</p>
+            </div>
+            <div class="card">
+              <h3>Under 4% unsold</h3>
+              <p>Leftover pieces are donated rather than destroyed or discounted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         CALL TO ACTION — the coloured banner near the bottom
+         ==================================================================== -->
+    <section class="reveal">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Don't miss the next drop</h2>
+          <p>Drop 15 is announced 48 hours before it goes live. Subscribers get first access.</p>
+          <a class="btn btn-light" href="contact.html">Join the list</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================================
+       FOOTER
+       Also copied into every page — keep them matching.
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html">MIX<span class="grad">D</span></a>
+          <p style="margin-top:12px; max-width:34ch;">
+            Limited-run apparel built from unexpected brand collaborations.
+          </p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="marketing.html">Marketing Plan</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@mixd.example">hello@mixd.example</a></li>
+            <li>Studio 4, Fabric Lane</li>
+            <li>Vancouver, BC</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span class="js-year">2026</span> MIXD. A fictional company created for an IB Business Management SL project.</span>
+        <span>Brand partners shown are invented examples.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loads the small script that runs the menu and scroll animations -->
+  <script src="js/main.js"></script>
+</body>
+</html>

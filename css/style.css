@@ -1,0 +1,660 @@
+/* ==========================================================================
+   MIXD — MAIN STYLESHEET
+   ==========================================================================
+   This one file controls how the WHOLE website looks.
+   Every page (index.html, about.html, etc.) loads this file.
+
+   HOW TO CHANGE THE COLOURS:
+   Scroll to "1. DESIGN TOKENS" just below. Change the colour codes there
+   and every page updates automatically. You do not need to touch anything else.
+
+   Colour codes are "hex" codes, e.g. #6C3CF4. You can pick new ones at
+   https://coolors.co or just Google "hex color picker".
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. DESIGN TOKENS  —  ALL THE COLOURS AND SIZES LIVE HERE
+   ========================================================================== */
+
+:root {
+  /* --- Brand colours (change these to re-skin the whole site) --- */
+  --brand-violet: #6C3CF4;
+  --brand-pink:   #FF2D78;
+  --brand-orange: #FF9F0A;
+  --brand-blue:   #0A84FF;
+  --brand-green:  #30D158;
+
+  /* The signature MIXD gradient — used on buttons and headline words */
+  --gradient: linear-gradient(100deg, var(--brand-violet), var(--brand-pink) 55%, var(--brand-orange));
+
+  /* --- Neutrals (backgrounds and text) --- */
+  --bg:        #FFFFFF;   /* main page background */
+  --bg-soft:   #F5F5F7;   /* light grey section background */
+  --bg-dark:   #0B0B0F;   /* dark section background */
+  --ink:       #1D1D1F;   /* main text colour */
+  --ink-soft:  #6E6E73;   /* secondary / smaller text */
+  --ink-invert:#FFFFFF;   /* text on dark backgrounds */
+  --line:      #E3E3E6;   /* thin divider lines and card borders */
+
+  /* --- Shape and spacing --- */
+  --radius:    20px;      /* how rounded the cards and buttons are */
+  --radius-sm: 12px;
+  --shadow:    0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.12);
+  --maxw:      1120px;    /* how wide the content can get on big screens */
+
+  /* --- Typography --- */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+/* ==========================================================================
+   2. BASE / RESET  —  sensible defaults, you rarely need to edit this
+   ========================================================================== */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5em;
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+
+h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: 1.35rem; }
+
+p { margin: 0 0 1em; }
+
+/* Utility classes used across the pages */
+.wrap      { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.center    { text-align: center; }
+.muted     { color: var(--ink-soft); }
+.lead      { font-size: 1.2rem; color: var(--ink-soft); max-width: 60ch; }
+.lead.center { margin-left: auto; margin-right: auto; }
+
+/* Makes a word or phrase print in the MIXD gradient. Use like:
+   <span class="grad">mixed</span>  */
+.grad {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Small pill-shaped label above headings */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-violet);
+  margin-bottom: 14px;
+}
+
+
+/* ==========================================================================
+   3. BUTTONS
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+/* Filled gradient button — the main call to action */
+.btn-primary {
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(108, 60, 244, 0.28);
+}
+
+/* Outlined button — the secondary action */
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-ghost:hover { background: var(--bg-soft); }
+
+/* Button used on dark backgrounds */
+.btn-light {
+  background: #fff;
+  color: var(--ink);
+}
+
+
+/* ==========================================================================
+   4. HEADER / NAVIGATION BAR
+   --------------------------------------------------------------------------
+   The frosted bar pinned to the top of every page.
+   TO ADD OR RENAME A PAGE LINK: edit the <nav> block in EACH .html file.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* The page you are currently on gets this class (added in the HTML) */
+.nav-links a.active { color: var(--ink); font-weight: 600; }
+
+/* Hamburger button — only visible on phones */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+  padding: 4px 8px;
+}
+
+
+/* ==========================================================================
+   5. SECTIONS AND LAYOUT HELPERS
+   ========================================================================== */
+
+section { padding: 100px 0; }
+
+.section-soft { background: var(--bg-soft); }
+
+.section-dark {
+  background: var(--bg-dark);
+  color: var(--ink-invert);
+}
+.section-dark .muted,
+.section-dark .lead { color: rgba(255, 255, 255, 0.65); }
+
+.section-head { max-width: 62ch; margin: 0 auto 56px; text-align: center; }
+
+/* A responsive grid. Add .cols-2, .cols-3 or .cols-4 to set the columns. */
+.grid { display: grid; gap: 24px; }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Two columns of unequal width, used for text-beside-image blocks */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+
+/* ==========================================================================
+   6. CARDS
+   ========================================================================== */
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.card h3 { margin-bottom: 8px; }
+.card p  { color: var(--ink-soft); margin-bottom: 0; }
+
+.section-dark .card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.section-dark .card p { color: rgba(255, 255, 255, 0.65); }
+
+/* Big coloured number or emoji at the top of a card */
+.card-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  background: var(--bg-soft);
+}
+.section-dark .card-icon { background: rgba(255, 255, 255, 0.1); }
+
+
+/* ==========================================================================
+   7. HERO (the big area at the top of the home page)
+   ========================================================================== */
+
+.hero {
+  padding: 110px 0 90px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft coloured glow behind the hero text */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 620px;
+  background: radial-gradient(circle at 30% 40%, rgba(108, 60, 244, 0.22), transparent 60%),
+              radial-gradient(circle at 70% 50%, rgba(255, 45, 120, 0.18), transparent 60%);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.hero h1 { margin-bottom: 20px; }
+.hero .lead { margin: 0 auto 34px; font-size: 1.28rem; }
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* ==========================================================================
+   8. PRODUCT CARDS AND THE T-SHIRT / HOODIE GRAPHICS
+   --------------------------------------------------------------------------
+   The garment pictures are drawn with code (SVG) instead of photo files,
+   so the site stays fast and there are no images to manage.
+   TO USE REAL PHOTOS INSTEAD: put your photo in the images/ folder and
+   replace the <svg>...</svg> block with  <img src="images/your-photo.jpg" alt="">
+   ========================================================================== */
+
+.product {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.product:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
+.product-art {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  padding: 26px;
+  background: var(--bg-soft);
+}
+.product-art svg { width: 100%; height: 100%; max-height: 220px; }
+
+.product-body { padding: 24px 26px 28px; flex: 1; display: flex; flex-direction: column; }
+.product-body h3 { margin-bottom: 4px; font-size: 1.15rem; }
+
+.product-mix {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+
+.product-price {
+  margin-top: auto;
+  padding-top: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(108, 60, 244, 0.1);
+  color: var(--brand-violet);
+}
+
+
+/* ==========================================================================
+   9. STATISTICS ROW
+   ========================================================================== */
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat { text-align: center; }
+.stat-num {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label { font-size: 0.92rem; color: var(--ink-soft); }
+.section-dark .stat-label { color: rgba(255, 255, 255, 0.6); }
+
+
+/* ==========================================================================
+   10. STEPS ("How it works" numbered list)
+   ========================================================================== */
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fff;
+  background: var(--gradient);
+  margin-bottom: 18px;
+}
+
+
+/* ==========================================================================
+   11. TABLES (used on the Marketing Plan page)
+   ========================================================================== */
+
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 560px;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+thead th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-soft);
+  border-bottom: 2px solid var(--line);
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+
+
+/* ==========================================================================
+   12. SWOT GRID (Marketing Plan page)
+   ========================================================================== */
+
+.swot { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+.swot-box {
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--brand-violet);
+  background: var(--bg);
+}
+.swot-box:nth-child(2) { border-top-color: var(--brand-pink); }
+.swot-box:nth-child(3) { border-top-color: var(--brand-blue); }
+.swot-box:nth-child(4) { border-top-color: var(--brand-orange); }
+
+.swot-box h3 { font-size: 1.05rem; margin-bottom: 12px; }
+.swot-box ul { margin: 0; padding-left: 18px; color: var(--ink-soft); }
+.swot-box li { margin-bottom: 8px; }
+
+
+/* ==========================================================================
+   13. CONTACT FORM
+   ========================================================================== */
+
+.form-grid { display: grid; gap: 18px; }
+.form-row  { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 13px 15px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--brand-violet);
+  box-shadow: 0 0 0 3px rgba(108, 60, 244, 0.15);
+}
+
+textarea { min-height: 140px; resize: vertical; }
+
+/* Green confirmation message that appears after pressing Send */
+.form-note {
+  display: none;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(48, 209, 88, 0.12);
+  color: #1c7a35;
+  font-size: 0.94rem;
+}
+.form-note.show { display: block; }
+
+
+/* ==========================================================================
+   14. FAQ (click to open/close)
+   ========================================================================== */
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.4rem; color: var(--ink-soft); line-height: 1; }
+.faq details[open] summary::after { content: "\2013"; }
+.faq details p { margin: 12px 0 0; color: var(--ink-soft); }
+
+
+/* ==========================================================================
+   15. CALL-TO-ACTION BANNER
+   ========================================================================== */
+
+.cta {
+  border-radius: 28px;
+  padding: 72px 40px;
+  text-align: center;
+  background: var(--gradient);
+  color: #fff;
+}
+.cta h2 { color: #fff; }
+.cta p  { color: rgba(255, 255, 255, 0.9); max-width: 52ch; margin: 0 auto 28px; }
+
+
+/* ==========================================================================
+   16. FOOTER
+   ========================================================================== */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 56px 0 40px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.site-footer h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: 9px; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--ink); }
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   17. SCROLL-IN ANIMATION (handled by js/main.js)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* Respect users who have asked their device to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+
+/* ==========================================================================
+   18. RESPONSIVE  —  how the site rearranges on tablets and phones
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .cols-4, .stats { grid-template-columns: repeat(2, 1fr); }
+  .cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .split  { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Phones */
+@media (max-width: 680px) {
+  section { padding: 68px 0; }
+
+  .cols-2, .cols-3, .cols-4,
+  .stats, .swot, .form-row { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .nav-toggle { display: block; }
+
+  /* Menu collapses into a dropdown; js/main.js adds the "open" class */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 24px 18px;
+    display: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: 12px 0; font-size: 1rem; }
+
+  .cta { padding: 52px 24px; }
+}
