@@ -8,7 +8,7 @@
   HOW TO EDIT THIS PAGE (no coding knowledge needed):
     • Text you can change is between tags, like  <h1>Change me</h1>
     • Do NOT delete the angle brackets < > — they hold the page together
-    • Anything between  <!-- and -->  is a note to you and is not shown
+    • Anything inside an HTML comment is a note to you and is not shown
     • Every section below starts with a comment saying what it is
 
   The colours and fonts are NOT in this file. They are in css/style.css.
@@ -24,6 +24,15 @@
 
   <!-- The short description Google shows under the link -->
   <meta name="description" content="MIXD creates limited-run apparel from unexpected brand collaborations. Two brands, one fit.">
+
+  <link rel="icon" href="visuals/exports/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="visuals/exports/favicon-32.png" type="image/png" sizes="32x32">
+  <meta property="og:image" content="https://clwx-31.github.io/mixd-website/visuals/exports/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MIXD — Two brands. One fit. Limited-run collaboration apparel.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://clwx-31.github.io/mixd-website/visuals/exports/og-image.png">
 
   <!-- Loads the stylesheet that controls how everything looks -->
   <link rel="stylesheet" href="css/style.css">
@@ -60,7 +69,7 @@
          HERO — the big headline at the top of the page
          This is the first thing visitors read. Keep it short and punchy.
          ==================================================================== -->
-    <section class="hero">
+    <section class="hero hero--home">
       <div class="wrap">
         <span class="eyebrow">Limited-run collaboration apparel</span>
         <h1>Two brands.<br>One <span class="grad">fit</span>.</h1>

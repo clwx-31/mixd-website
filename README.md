@@ -10,6 +10,12 @@ installation. Every file can be edited directly in the browser on GitHub.com.
 **Live site:** https://clwx-31.github.io/mixd-website/
 **Repository:** https://github.com/clwx-31/mixd-website
 
+> ## 👉 Group members: read [**EDITING-GUIDE.md**](EDITING-GUIDE.md) first
+>
+> That is the full step-by-step guide to editing this website in your browser —
+> no installing anything, no coding knowledge needed, and nothing you can
+> permanently break. It takes 5 minutes to read.
+
 ---
 
 ## For the teacher
@@ -75,45 +81,22 @@ pasted into one of the `.html` files.
 
 ## How to edit the site — zero setup, straight on GitHub.com
 
-You do **not** need to install anything. You need a free GitHub account and to be
-added as a collaborator (see below), then:
+**Full instructions: [EDITING-GUIDE.md](EDITING-GUIDE.md)** — read that one, it
+covers everything below in detail.
+
+The short version, once you have accepted your collaborator invite:
 
 1. Go to https://github.com/clwx-31/mixd-website
-2. Click the file you want to change (for example `about.html`)
-3. Click the **pencil icon** (✏️) at the top right of the file
-4. Change the text between the tags — for example turn
-   `<h1>Our mission</h1>` into `<h1>What we stand for</h1>`
-5. Scroll to the bottom, type a short note in **Commit changes** describing what
-   you did (e.g. "Updated mission statement")
-6. Make sure **Commit directly to the `main` branch** is selected
-7. Click **Commit changes**
+2. Click the file you want to change (e.g. `about.html`)
+3. Click the **pencil icon ✏️** at the top right
+4. Change the words **between** the tags — never delete the `<` `>` brackets
+5. Scroll down, write a short note like `Updated mission statement`
+6. Keep **Commit directly to the `main` branch** selected, click **Commit changes**
 
-Your change is live on the website in about 30–60 seconds. Refresh the page.
+Your change is live in about 30–60 seconds. Refresh the site to see it.
 
-### Safe editing tips
-
-- Only change the words **between** the tags: `<p>change this bit</p>`
-- Never delete the `<` `>` brackets — they hold the page together
-- Every opening tag like `<p>` needs its closing tag `</p>`
-- To change a colour, open `css/style.css` and edit the colour codes at the very
-  top of the file (they look like `#7A4DFF`). They apply across the whole site.
-- If a page looks broken after an edit, go to the **History** tab of that file,
-  open the previous version, and copy the old text back in. Nothing is ever lost.
-
-### Using AI to help you edit
-
-If you are stuck on the HTML or CSS, open **claude.ai** or **chatgpt.com** in
-another browser tab (both have free versions) and:
-
-1. Copy the section of the file you are struggling with
-2. Paste it in and describe what you want, e.g. *"Here is a chunk of my HTML.
-   Add a fourth product card that matches the existing three, for a bucket hat
-   at $30."*
-3. Copy the code it gives back
-4. Paste it into the GitHub editor in place of the old section, and commit
-
-This works well for adding cards, rows in a table, or changing colours. Always
-check the live site afterwards to make sure it still looks right.
+Words are in the `.html` files. Colours and fonts are in `css/style.css`.
+Broke something? Nothing is ever lost — see the **Undo** section of the guide.
 
 ---
 

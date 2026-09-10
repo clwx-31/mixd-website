@@ -203,10 +203,10 @@ p { margin: 0 0 1em; }
   color: var(--ink-soft);
   transition: color 0.15s ease;
 }
-.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover { color: var(--brand-violet); }
 
 /* The page you are currently on gets this class (added in the HTML) */
-.nav-links a.active { color: var(--ink); font-weight: 600; }
+.nav-links a.active { color: var(--brand-violet); font-weight: 600; }
 
 /* Hamburger button — only visible on phones */
 .nav-toggle {
@@ -324,6 +324,27 @@ section { padding: 100px 0; }
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* Dark home hero with a quiet center for readable copy. */
+.hero--home {
+  min-height: min(760px, calc(100svh - 60px));
+  display: grid;
+  place-items: center;
+  color: var(--ink-invert);
+  background-color: var(--bg-dark);
+  background-image: url("../visuals/exports/hero-background.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero--home::before { display: none; }
+.hero--home .lead { color: rgba(255, 255, 255, 0.72); }
+.hero--home .eyebrow { color: #FFFFFF; }
+.hero--home .btn-ghost {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.32);
+}
+.hero--home .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
 
 
 /* ==========================================================================
@@ -562,10 +583,11 @@ textarea { min-height: 140px; resize: vertical; }
    ========================================================================== */
 
 .site-footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 56px 0 40px;
   font-size: 0.92rem;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.62);
+  background: var(--bg-dark);
 }
 
 .footer-grid {
@@ -579,17 +601,18 @@ textarea { min-height: 140px; resize: vertical; }
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: var(--ink);
+  color: var(--ink-invert);
   margin-bottom: 14px;
 }
 
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
 .site-footer li { margin-bottom: 9px; }
 .site-footer a { text-decoration: none; }
-.site-footer a:hover { color: var(--ink); }
+.site-footer .logo { color: var(--ink-invert); }
+.site-footer a:hover { color: var(--ink-invert); }
 
 .footer-bottom {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
@@ -632,6 +655,8 @@ textarea { min-height: 140px; resize: vertical; }
 /* Phones */
 @media (max-width: 680px) {
   section { padding: 68px 0; }
+
+  .hero--home { min-height: 620px; }
 
   .cols-2, .cols-3, .cols-4,
   .stats, .swot, .form-row { grid-template-columns: 1fr; }

@@ -15,6 +15,8 @@ Format:
 
 ---
 
+Integration status: wired into the site HTML and CSS on September 10, 2026.
+
 ### favicon.svg
 - File: visuals/exports/favicon.svg
 - Goes in: `<head>` of every `.html` page
