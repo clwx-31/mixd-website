@@ -1,8 +1,8 @@
 # MIXD — IB Business Management SL Project Website
 
-A static website for **MIXD**, a fictional apparel label that releases limited-run
-clothing built from unexpected brand collaborations. Built for an IB Business
-Management SL group project.
+A static website for **MIXD**, a fictional Waukesha apparel company offering
+durable, versatile clothing that gives customers more control over how they mix
+brands and express personal style. Built for an IB Business Management SL group project.
 
 The site is plain HTML, CSS and JavaScript — no frameworks, no build step, no
 installation. Every file can be edited directly in the browser on GitHub.com.
@@ -37,8 +37,8 @@ with their name, the date, and exactly what they changed.
 | Page | File | What it covers |
 |---|---|---|
 | Home | `index.html` | Introduction, what MIXD does, key figures |
-| About / Mission | `about.html` | Story, mission, vision, values, team, milestones |
-| Products | `products.html` | Collaboration drops and the core range |
+| About / Mission | `about.html` | Founders, mission, vision, values and proposed nonprofit partnership |
+| Products | `products.html` | Nine clothing categories, customer choice and warranty |
 | Marketing Plan | `marketing.html` | Objectives, target market, 7Ps, SWOT, promotion, budget |
 | Contact | `contact.html` | Contact details, message form, FAQs |
 

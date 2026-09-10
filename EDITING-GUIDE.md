@@ -79,8 +79,8 @@ Find a list. Copy one whole `<li>...</li>` line, paste it underneath, change the
 
 ```html
 <ul>
-  <li>Collaboration model gives us access to partner audiences</li>
-  <li>Scarcity drives fast sell-through</li>
+  <li>Versatile pieces work across brands</li>
+  <li>Six-month warranty supports customer confidence</li>
   <li>YOUR NEW POINT HERE</li>
 </ul>
 ```
@@ -106,8 +106,8 @@ Open `products.html`, find a block that starts with `<!-- ---------- Product 3 -
 Copy **everything** from `<article class="product">` down to its `</article>`,
 paste it after the last product, then change the name, the description and the price.
 
-The picture is the `<svg>` part. To change its two colours, find the two
-`stop-color="#XXXXXX"` values and swap in different colour codes. **Also change the
+The picture is the `<svg>` part. Keep its two `stop-color="#XXXXXX"` values inside
+the approved purple palette shown in `css/style.css`. **Also change the
 `id="mix3"` and `url(#mix3)` to a number no other product is using** (e.g. `mix7`) —
 if two products share an id, both pictures go wrong.
 
@@ -153,8 +153,8 @@ another tab (free versions work fine):
 2. Paste it in and say what you want. Be specific, and tell it the constraints:
 
 > Here is a chunk of HTML from my school project website. Add a fourth product
-> card that matches the existing three exactly — a bucket hat, $30, partner brand
-> "Peak & Pine Outdoors". Keep the same classes and structure. Give the SVG a
+> card that matches the existing three exactly — a tank top, $30, available in
+> three fits. Keep the same classes and structure. Give the SVG a
 > unique id. Reply with just the code.
 
 3. Copy what it gives back

@@ -44,11 +44,11 @@ Revised the same day to the final black, white and purple visual system.
   <meta property="og:image" content="https://clwx-31.github.io/mixd-website/visuals/exports/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="MIXD — Two brands. One fit. Limited-run collaboration apparel.">
+  <meta property="og:image:alt" content="MIXD — Two brands. One fit. Durable, versatile clothing from Waukesha, Wisconsin.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://clwx-31.github.io/mixd-website/visuals/exports/og-image.png">
   ```
-- Notes: 1200×630, approximately 76 KB. Minimal black share card with a white wordmark and purple “D”.
+- Notes: 1200×630, approximately 84 KB. Minimal black share card with a white wordmark, purple “D”, location and founding year.
 
 ### hero-background.svg
 - File: visuals/exports/hero-background.svg
