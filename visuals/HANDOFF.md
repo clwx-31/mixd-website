@@ -16,6 +16,7 @@ Format:
 ---
 
 Integration status: wired into the site HTML and CSS on September 10, 2026.
+Revised the same day to the final black, white and purple visual system.
 
 ### favicon.svg
 - File: visuals/exports/favicon.svg
@@ -24,7 +25,7 @@ Integration status: wired into the site HTML and CSS on September 10, 2026.
   ```html
   <link rel="icon" href="visuals/exports/favicon.svg" type="image/svg+xml">
   ```
-- Notes: Scalable transparent MIXD “D” mark in the exact brand gradient; 617 bytes.
+- Notes: Purple MIXD “D” on a rounded black tile; approximately 700 bytes.
 
 ### favicon-32.png
 - File: visuals/exports/favicon-32.png
@@ -33,7 +34,7 @@ Integration status: wired into the site HTML and CSS on September 10, 2026.
   ```html
   <link rel="icon" href="visuals/exports/favicon-32.png" type="image/png" sizes="32x32">
   ```
-- Notes: 32×32 PNG fallback; 1.3 KB.
+- Notes: 32×32 PNG fallback; approximately 1.4 KB.
 
 ### og-image.png
 - File: visuals/exports/og-image.png
@@ -47,7 +48,7 @@ Integration status: wired into the site HTML and CSS on September 10, 2026.
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://clwx-31.github.io/mixd-website/visuals/exports/og-image.png">
   ```
-- Notes: 1200×630, 75 KB. High-contrast layout keeps the logo and tagline legible in small chat previews.
+- Notes: 1200×630, approximately 76 KB. Minimal black share card with a white wordmark and purple “D”.
 
 ### hero-background.svg
 - File: visuals/exports/hero-background.svg
@@ -86,4 +87,4 @@ Integration status: wired into the site HTML and CSS on September 10, 2026.
     }
   }
   ```
-- Notes: 1600×820 responsive SVG, approximately 3.6 KB. Edge-weighted split-colour forms preserve a dark central field for white hero text at desktop and 360px phone widths.
+- Notes: 1600×820 responsive SVG, approximately 1.5 KB. Black field with a restrained violet glow and fine orbital lines.

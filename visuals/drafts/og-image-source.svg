@@ -1,38 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-desc">
   <title id="og-title">MIXD share card</title>
-  <desc id="og-desc">MIXD logo and the tagline Two brands. One fit. on a dark violet, pink and orange background.</desc>
+  <desc id="og-desc">MIXD logo and the tagline Two brands. One fit. in white and purple on black.</desc>
   <defs>
-    <linearGradient id="og-card-grad-2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0.5" stop-color="#6C3CF4"/>
-      <stop offset="0.5" stop-color="#FF2D78"/>
-    </linearGradient>
-    <linearGradient id="og-card-grad-3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0.5" stop-color="#FF2D78"/>
-      <stop offset="0.5" stop-color="#FF9F0A"/>
-    </linearGradient>
-    <linearGradient id="og-card-grad-4" x1="570" y1="214" x2="756" y2="390" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6C3CF4"/>
-      <stop offset="0.55" stop-color="#FF2D78"/>
-      <stop offset="1" stop-color="#FF9F0A"/>
+    <linearGradient id="og-purple-1" x1="655" y1="198" x2="862" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4B5FD"/>
+      <stop offset="0.48" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#5B21B6"/>
     </linearGradient>
   </defs>
-
-  <rect width="1200" height="630" fill="#0B0B0F"/>
-
-  <g opacity="0.9" transform="translate(-91 127) rotate(-18 165 100)">
-    <rect width="330" height="200" rx="100" fill="url(#og-card-grad-2)"/>
-    <path d="M165 0v200" stroke="#FFFFFF" stroke-opacity="0.2"/>
-  </g>
-  <g opacity="0.86" transform="translate(1014 373) rotate(18 160 94)">
-    <rect width="320" height="188" rx="94" fill="url(#og-card-grad-3)"/>
-    <path d="M160 0v188" stroke="#FFFFFF" stroke-opacity="0.2"/>
-  </g>
+  <rect width="1200" height="630" fill="#000000"/>
+  <ellipse cx="600" cy="188" rx="520" ry="350" fill="none" stroke="#8B5CF6" stroke-opacity="0.12"/>
 
   <g aria-label="MIXD">
-    <text x="600" y="302" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="170" font-weight="750" letter-spacing="-11">MIX</text>
-    <path fill="url(#og-card-grad-4)" fill-rule="evenodd" d="M735 181h72c63 0 103 38 103 97s-40 97-103 97h-72V181Zm45 39v116h26c36 0 57-22 57-58s-21-58-57-58h-26Z"/>
+    <text x="530" y="321" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="170" font-weight="750" letter-spacing="-11">MIX</text>
+    <path fill="url(#og-purple-1)" fill-rule="evenodd" d="M665 198h72c63 0 103 38 103 97s-40 97-103 97h-72V198Zm45 39v116h26c36 0 57-22 57-58s-21-58-57-58h-26Z"/>
   </g>
 
-  <text x="600" y="451" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" font-weight="650" letter-spacing="-1.4">Two brands. One fit.</text>
-  <text x="600" y="505" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="500" letter-spacing="2.5">LIMITED-RUN COLLABORATION APPAREL</text>
+  <text x="600" y="472" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" font-weight="650" letter-spacing="-1.4">Two brands. One fit.</text>
+  <path d="M390 526H810" stroke="#8B5CF6" stroke-opacity="0.5"/>
 </svg>

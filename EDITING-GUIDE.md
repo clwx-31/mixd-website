@@ -122,8 +122,9 @@ Open `css/style.css`. The first ~25 lines are the colours. Change a hex code and
 everything using it updates at once:
 
 ```css
---brand-violet: #6C3CF4;
---brand-pink:   #FF2D78;
+--brand-violet:      #8B5CF6;
+--brand-violet-deep: #5B21B6;
+--brand-violet-soft: #C4B5FD;
 ```
 
 Pick new codes at https://coolors.co or just search "colour picker". Change one at

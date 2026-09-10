@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="favicon-title">
-  <title id="favicon-title">MIXD gradient D mark</title>
+  <title id="favicon-title">MIXD purple D mark on black</title>
   <defs>
-    <linearGradient id="favicon-grad-1" x1="8" y1="8" x2="58" y2="54" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#6C3CF4"/>
-      <stop offset="0.55" stop-color="#FF2D78"/>
-      <stop offset="1" stop-color="#FF9F0A"/>
+    <linearGradient id="favicon-purple-1" x1="10" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4B5FD"/>
+      <stop offset="0.48" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#5B21B6"/>
     </linearGradient>
   </defs>
-  <path fill="url(#favicon-grad-1)" fill-rule="evenodd" d="M8 6h22c17.1 0 28 10.2 28 26S47.1 58 30 58H8V6Zm12 11v30h9.5C39.8 47 46 41.3 46 32s-6.2-15-16.5-15H20Z"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#070709"/>
+  <path fill="url(#favicon-purple-1)" fill-rule="evenodd" d="M12 10h18c14.7 0 24 8.6 24 22s-9.3 22-24 22H12V10Zm10 9v26h7.6C38.7 45 44 40.2 44 32s-5.3-13-14.4-13H22Z"/>
 </svg>
