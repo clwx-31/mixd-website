@@ -88,3 +88,21 @@ Revised the same day to the final black, white and purple visual system.
   }
   ```
 - Notes: 1600×820 responsive SVG, approximately 1.5 KB. Black field with a restrained violet glow and fine orbital lines.
+
+### aw-7up-refresh-hoodie.webp
+- File: visuals/exports/products/aw-7up-refresh-hoodie.webp
+- Goes in: Concept collection on `index.html` and `products.html`
+- Snippet: `<img src="visuals/exports/products/aw-7up-refresh-hoodie.webp" alt="Brown, green and cream A&amp;W and 7UP concept hoodie" width="900" height="900">`
+- Notes: 900×900 WebP, 44 KB. Unofficial student concept; not an authorized brand collaboration.
+
+### gucci-nike-heritage-hoodie.webp
+- File: visuals/exports/products/gucci-nike-heritage-hoodie.webp
+- Goes in: Concept collection on `index.html` and `products.html`
+- Snippet: `<img src="visuals/exports/products/gucci-nike-heritage-hoodie.webp" alt="Cream and green Gucci and Nike concept hoodie" width="900" height="900">`
+- Notes: 900×900 WebP, 33 KB. Unofficial student concept; not an authorized brand collaboration.
+
+### interstellar-star-wars-beyond-hoodie.webp
+- File: visuals/exports/products/interstellar-star-wars-beyond-hoodie.webp
+- Goes in: Concept collection on `index.html` and `products.html`
+- Snippet: `<img src="visuals/exports/products/interstellar-star-wars-beyond-hoodie.webp" alt="Black Interstellar and Star Wars space concept hoodie" width="900" height="900">`
+- Notes: 900×900 WebP, 55 KB. Unofficial student concept; not an authorized brand collaboration.
