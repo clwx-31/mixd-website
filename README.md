@@ -37,9 +37,10 @@ with their name, the date, and exactly what they changed.
 | Page | File | What it covers |
 |---|---|---|
 | Home | `index.html` | Introduction, what MIXD does, key figures |
-| About / Mission | `about.html` | Founders, mission, vision, values and Goodwill nonprofit collaboration |
+| About / Mission | `about.html` | Founders, mission, vision and core values |
 | Products | `products.html` | Nine clothing categories, customer choice and warranty |
 | Marketing Plan | `marketing.html` | Objectives, target market, 7Ps, SWOT, promotion, budget |
+| Goodwill | `goodwill.html` | Nonprofit collaboration, purpose, activities and impact goals |
 | Contact | `contact.html` | Contact details, message form, FAQs |
 
 ## File structure
@@ -50,6 +51,7 @@ mixd-website/
 ├── about.html        <- About / Mission
 ├── products.html     <- Products
 ├── marketing.html    <- Marketing Plan
+├── goodwill.html     <- Goodwill nonprofit collaboration
 ├── contact.html      <- Contact
 ├── css/
 │   └── style.css     <- ALL colours, fonts and spacing live here

@@ -55,6 +55,7 @@ If nothing changed, wait another minute and hard-refresh (`Cmd+Shift+R` on Mac,
 | Mission, vision, values, team, story | `about.html` |
 | Products, prices, product descriptions | `products.html` |
 | Objectives, target market, 7Ps, SWOT, budget | `marketing.html` |
+| Goodwill collaboration and impact goals | `goodwill.html` |
 | Contact details, FAQs | `contact.html` |
 | **Colours and fonts (whole site at once)** | `css/style.css` |
 
