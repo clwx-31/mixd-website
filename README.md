@@ -37,7 +37,7 @@ with their name, the date, and exactly what they changed.
 | Page | File | What it covers |
 |---|---|---|
 | Home | `index.html` | Introduction, what MIXD does, key figures |
-| About / Mission | `about.html` | Founders, mission, vision, values and proposed nonprofit partnership |
+| About / Mission | `about.html` | Founders, mission, vision, values and Goodwill nonprofit collaboration |
 | Products | `products.html` | Nine clothing categories, customer choice and warranty |
 | Marketing Plan | `marketing.html` | Objectives, target market, 7Ps, SWOT, promotion, budget |
 | Contact | `contact.html` | Contact details, message form, FAQs |
