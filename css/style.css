@@ -208,6 +208,17 @@ p { margin: 0 0 1em; }
 /* The page you are currently on gets this class (added in the HTML) */
 .nav-links a.active { color: var(--brand-violet); font-weight: 600; }
 
+/* "Apply Now" — the purple pill at the end of the menu */
+.nav-links a.nav-cta {
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--brand-violet);
+  color: #fff;
+  font-weight: 600;
+}
+.nav-links a.nav-cta:hover,
+.nav-links a.nav-cta.active { background: var(--brand-violet-deep); color: #fff; }
+
 /* Hamburger button — only visible on phones */
 .nav-toggle {
   display: none;
@@ -593,6 +604,26 @@ textarea { min-height: 140px; resize: vertical; }
 }
 .form-note.show { display: block; }
 
+/* Canva job application preview on apply.html (US Letter page shape) */
+.canva-embed {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  aspect-ratio: 8.5 / 11;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: #fff;
+}
+.canva-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 
 /* ==========================================================================
    14. FAQ (click to open/close)
@@ -716,6 +747,11 @@ textarea { min-height: 140px; resize: vertical; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 
+  .cta { padding: 52px 24px; }
+}
+
+/* Menu: seven links need the ☰ button below 880px wide */
+@media (max-width: 880px) {
   .nav-toggle { display: block; }
 
   /* Menu collapses into a dropdown; js/main.js adds the "open" class */
@@ -733,6 +769,5 @@ textarea { min-height: 140px; resize: vertical; }
   }
   .nav-links.open { display: flex; }
   .nav-links a { display: block; padding: 12px 0; font-size: 1rem; }
-
-  .cta { padding: 52px 24px; }
+  .nav-links a.nav-cta { display: inline-block; margin-top: 8px; padding: 10px 20px; }
 }

@@ -42,6 +42,7 @@ with their name, the date, and exactly what they changed.
 | Marketing Plan | `marketing.html` | Objectives, target market, 7Ps, SWOT, promotion, budget |
 | Goodwill | `goodwill.html` | Nonprofit collaboration, purpose, activities and impact goals |
 | Contact | `contact.html` | Contact details, message form, FAQs |
+| Apply Now | `apply.html` | Open positions and the two-page job application (designed in Canva) |
 
 ## File structure
 
@@ -53,11 +54,14 @@ mixd-website/
 ├── marketing.html    <- Marketing Plan
 ├── goodwill.html     <- Goodwill nonprofit collaboration
 ├── contact.html      <- Contact
+├── apply.html        <- Apply Now (careers + job application)
 ├── css/
 │   └── style.css     <- ALL colours, fonts and spacing live here
 ├── js/
 │   └── main.js       <- Menu button, fade-in effect, contact form
 ├── images/           <- Put any image files here
+├── files/
+│   └── mixd-employment-application.pdf  <- Job application, exported from Canva
 ├── visuals/          <- Separate workspace for design/graphics work (see below)
 └── README.md         <- This file
 ```
@@ -131,3 +135,6 @@ MIXD is a fictional company created for a school assignment. All brand partners,
 figures, addresses and email addresses on the site are invented examples. The
 contact form does not send real messages — it shows a confirmation instead
 (instructions for making it send for real are inside `js/main.js`).
+
+The job application on `apply.html` was designed in Canva. The PDF in `files/`
+is Canva's own export, and the page embeds the live Canva design.

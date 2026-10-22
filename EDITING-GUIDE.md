@@ -57,6 +57,7 @@ If nothing changed, wait another minute and hard-refresh (`Cmd+Shift+R` on Mac,
 | Objectives, target market, 7Ps, SWOT, budget | `marketing.html` |
 | Goodwill collaboration and impact goals | `goodwill.html` |
 | Contact details, FAQs | `contact.html` |
+| Open jobs, how to apply | `apply.html` |
 | **Colours and fonts (whole site at once)** | `css/style.css` |
 
 Rule of thumb: **words live in the `.html` files, looks live in `css/style.css`.**
@@ -116,6 +117,19 @@ if two products share an id, both pictures go wrong.
 
 Open `contact.html`, copy one whole `<details>...</details>` block, change the
 question in `<summary>` and the answer in `<p>`.
+
+### Update the job application
+
+The application is designed in **Canva**, not in the website files.
+
+1. Edit the design in Canva (same account it was made in)
+2. **Share → Download → PDF Print**, keep both pages selected, download
+3. Rename the file to `mixd-employment-application.pdf`
+4. On GitHub, open the `files/` folder → **Add file → Upload files**, drop it in,
+   commit. It replaces the old one.
+
+The preview on `apply.html` updates by itself because it shows the live Canva design.
+If you add a job, also add a card for it in `apply.html` (copy one `<article>` block).
 
 ### Change the colours of the whole site
 
